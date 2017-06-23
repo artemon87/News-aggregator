@@ -1,0 +1,28 @@
+{% extends 'news/base.html' %}
+
+{% block content %}
+
+<div class="jabotran">
+	<div class="container">
+		<hr>
+		<hr>
+		<h1>New Feed</h1>
+		
+	</div>
+	
+</div>
+
+<div class="container">
+	<form method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<hr>
+	<button type="submit" class="btn btn-primary">Save</button>
+		
+	</form>
+	<footer>
+		<p>&copy; 2017 Django News</p>
+	</footer>
+</div>
+
+{% endblock %}
